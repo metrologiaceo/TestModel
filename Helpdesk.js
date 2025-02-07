@@ -3,7 +3,7 @@ var config = {
     prefix: '/',
     port: 443,
     isSecure: true,
-    webIntegrationId: 'Rl6R9uncsZ6ZIPbsD_MEEcc_oQzAxwiv'
+    webIntegrationId: 'fpLkNb7vtC7UIQcr7Q7oSHwpC23Mu3wS'
 };
 
 //Redirect to login if user is not logged in
@@ -43,47 +43,15 @@ login().then(() => {
             $( '#popup' ).hide();
         } );
         //Connection With App of Qlik Cloud
-        var app = qlik.openApp( '956f26c7-ef70-41b1-85b0-22491717ba60', config );
+        var app = qlik.openApp( 'a9b4b957-a8d9-4676-b2c2-3f4685f919da', config );
        
         //Load of ID objet App Qlik Cloud
-        app.visualization.get('8c98dd8c-ef7c-4d83-815c-5d6d66cc38c8').then(function(vis){
+        app.visualization.get('nzmHP').then(function(vis){
         vis.show("QV01");
         } );
         //KPI 1
-        app.visualization.get('GBLJKtx').then(function(vis){
+        app.visualization.get('ajHfejc').then(function(vis){
         vis.show("QV02");
-        } );
-        //KPI 2
-        app.visualization.get('ZCLQBPG').then(function(vis){
-        vis.show("QV03");
-        } );
-        //Gráfico 1
-        app.visualization.get('zBcmzpG').then(function(vis){
-        vis.show("QV04");
-        } );
-        //KPI 3
-        app.visualization.get('MYmhma').then(function(vis){
-        vis.show("QV05");
-        } );
-        //Gráfico 2
-        app.visualization.get('FpTyJdu').then(function(vis){
-        vis.show("QV06");
-        } );
-        //KPI 4
-        app.visualization.get('gThLYJ').then(function(vis){
-        vis.show("QV07");
-        } );
-        //Gráfico 3
-        app.visualization.get('CZJfTTS').then(function(vis){
-        vis.show("QV08");
-        } );
-        //KPI 5
-        app.visualization.get('DvkaxfW').then(function(vis){
-        vis.show("QV09");
-        } );
-        //Gráfico 4
-        app.visualization.get('PdPucF').then(function(vis){
-        vis.show("QV10");
         } );
         
     } );
